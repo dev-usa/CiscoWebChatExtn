@@ -1,0 +1,74 @@
+{
+  "name": "Cisco Web Chat Extension - By Sarat Marudhuri (CTS Associate ID:123456, Email @ saratchandramrs@gmail.com)",
+  "version": "20",
+  "manifest_version": 2,
+  "description": "Notifications for Chat messages, Group Chat Invites, Status Changes; Enables \"Copy (or) Email ALL Chat Messages\" with a single click",
+  "permissions": [
+    "notifications",
+	"clipboardWrite",
+	"storage"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "web_accessible_resources": [
+	"css/jquery-ui-1.10.1.custom.min.css",
+	"css/yellowButton.css",
+	"css/jquery.cluetip.css",
+	"images/animated-overlay.gif",
+	"images/ui-bg_diagonals-medium_20_d34d17_40x40.png",
+	"images/ui-bg_flat_30_cccccc_40x100.png",
+	"images/ui-bg_flat_50_5c5c5c_40x100.png",
+	"images/ui-bg_gloss-wave_45_817865_500x100.png",
+	"images/ui-bg_gloss-wave_60_fece2f_500x100.png",
+	"images/ui-bg_gloss-wave_70_ffdd57_500x100.png",
+	"images/ui-bg_gloss-wave_90_fff9e5_500x100.png",
+	"images/ui-bg_highlight-soft_100_feeebd_1x100.png",
+	"images/ui-bg_inset-soft_30_ffffff_1x100.png",
+	"images/ui-icons_3d3d3d_256x240.png",
+	"images/ui-icons_bd7b00_256x240.png",
+	"images/ui-icons_d19405_256x240.png",
+	"images/ui-icons_eb990f_256x240.png",
+	"images/ui-icons_ed9f26_256x240.png",
+	"images/ui-icons_fadc7a_256x240.png",
+	"images/ui-icons_ffe180_256x240.png",
+	"images/chosen-sprite.png",
+	"images/chosen-sprite@2x.png",
+	"images/clueTipMaster-images/arrowdown.gif",
+	"images/clueTipMaster-images/arrowleft.gif",
+	"images/clueTipMaster-images/arrowright.gif",
+	"images/clueTipMaster-images/arrowup.gif",
+	"images/clueTipMaster-images/bl.gif",
+	"images/clueTipMaster-images/bl.png",
+	"images/clueTipMaster-images/br.gif",
+	"images/clueTipMaster-images/br.png",
+	"images/clueTipMaster-images/darrowdown.gif",
+	"images/clueTipMaster-images/darrowleft.gif",
+	"images/clueTipMaster-images/darrowright.gif",
+	"images/clueTipMaster-images/darrowup.gif",
+	"images/clueTipMaster-images/itunes.png",
+	"images/clueTipMaster-images/rarrowdown.gif",
+	"images/clueTipMaster-images/rarrowleft.gif",
+	"images/clueTipMaster-images/rarrowright.gif",
+	"images/clueTipMaster-images/rarrowup.gif",
+	"images/clueTipMaster-images/tl.gif",
+	"images/clueTipMaster-images/tl.png",
+	"images/clueTipMaster-images/tr.gif",
+	"images/clueTipMaster-images/tr.png",
+	"images/clueTipMaster-images/wait.gif"
+  ],
+  "icons": { 
+	"48": "green_48_48.png",
+    "128": "green_128_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.uhc.com/*/chatClient.html"],
+	  "js": ["js/jquery-1.9.1.js","js/jquery-ui-1.10.1.custom.min.js","js/chosen.jquery.min.js","js/mutation_summary.js","js/jquery.cluetip.min.js","js/myscript.js"],
+	  "css": ["css/yellowButton.css","css/jquery-ui-1.10.1.custom.min.css","css/jquery.cluetip.css","css/chosen.css"],
+	  "all_frames" : true
+    }
+  ]
+}
+
+
